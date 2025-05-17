@@ -45,7 +45,7 @@ jobs:
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
 
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 cradio_left_nice_nano_v2.uf2
+        run: mv build/zephyr/zmk.uf2 cradio_left_nice_nano_v2.uf2
 
       - name: Archive (Cradio/Sweep Left)
         uses: actions/upload-artifact@v4
@@ -60,7 +60,7 @@ jobs:
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
 
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 cradio_right_nice_nano_v2.uf2
+        run: mv build/zephyr/zmk.uf2 cradio_right_nice_nano_v2.uf2
 
       - name: Archive (Cradio/Sweep Right)
         uses: actions/upload-artifact@v4
